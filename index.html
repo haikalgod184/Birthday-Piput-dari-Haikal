@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Untuk Putri, Cintaku ✨ Happy 17th Birthday</title>
+    
+    <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           1. DEEP ROMANTIC DESIGN SYSTEM & COLOR PALETTE
+           ========================================================================== */
+        :root {
+            --rose-deep: #4a1525;
+            --rose-main: #9e2a2b;
+            --rose-soft: #ffccd5;
+            --blush-pink: #fff0f3;
+            --warm-gold: #e0a96d;
+            --cream-soft: #fffdfa;
+            --text-dark: #3a2228;
+            --text-romantic: #6b3543;
+            --glass-romantic: rgba(255, 253, 250, 0.68);
+            --glass-border: rgba(255, 204, 213, 0.7);
+            --shadow-romantic: 0 20px 50px rgba(158, 42, 43, 0.12), 0 10px 20px rgba(0, 0, 0, 0.03);
+            --transition-dreamy: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background: #ffe5ec;
+            color: var(--text-dark);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Dreamy Animated Rose Aurora Canvas & Glow Background */
+        .romantic-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(135deg, #ffe5ec 0%, #ffc2d1 35%, #ffe5ec 70%, #ffb3c6 100%);
+            background-size: 300% 300%;
+            animation: dreamyAurora 18s ease infinite alternate;
+            transition: opacity 1s ease;
+        }
+
+        @keyframes dreamyAurora {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Ambient Floating Light Orbs */
+        .ambient-glow {
+            position: absolute;
+            width: 45vw;
+            height: 45vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.6) 0%, rgba(255, 240, 243, 0) 70%);
+            filter: blur(60px);
+            pointer-events: none;
+            animation: floatGlow 14s infinite ease-in-out alternate;
+        }
+
+        .glow-1 { top: -10%; left: -10%; }
+        .glow-2 { bottom: -10%; right: -10%; animation-delay: -7s; }
+
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, 50px) scale(1.2); }
+        }
+
+        /* Canvas Overlay (Petals & Sparkles) */
+        #petalCanvas {
+            position: fixed;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Romantic Soft Cursor Glow */
+        .romantic-cursor {
+            width: 24px;
+            height: 24px;
+            background: radial-gradient(circle, rgba(255, 117, 151, 0.8) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        /* Main Container */
+        #app {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+        .screen {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.98);
+            transition: all 0.9s var(--transition-dreamy);
+        }
+
+        .screen.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Soft Romantic Glass Card */
+        .romantic-card {
+            background: var(--glass-romantic);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1.5px solid var(--glass-border);
+            border-radius: 32px;
+            box-shadow: var(--shadow-romantic);
+            padding: 42px 36px;
+            width: 100%;
+            max-width: 460px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s var(--transition-dreamy), box-shadow 0.5s ease;
+        }
+
+        .romantic-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 32px;
+            padding: 1.5px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,204,213,0.3));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        /* Romantic Button */
+        .btn-romantic {
+            background: linear-gradient(135deg, #ff7597, #c9184a);
+            color: #ffffff;
+            border: none;
+            padding: 16px 38px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(201, 24, 74, 0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.4s var(--transition-dreamy);
+            outline: none;
+            margin-top: 10px;
+        }
+
+        .btn-romantic:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 18px 40px rgba(201, 24, 74, 0.5);
+            background: linear-gradient(135deg, #ff85a1, #ff4d6d);
+        }
+
+        .btn-romantic:active {
+            transform: translateY(0) scale(0.97);
+        }
+
+        /* Typography */
+        h1, h2, .poetic-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: var(--rose-deep);
+            letter-spacing: -0.2px;
+        }
+
+        p {
+            color: var(--text-romantic);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        /* Floating Nav Bar */
+        .romantic-nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 80;
+            display: flex;
+            gap: 8px;
+            background: rgba(255, 253, 250, 0.75);
+            backdrop-filter: blur(20px);
+            padding: 6px 10px;
+            border-radius: 40px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(158, 42, 43, 0.08);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+
+        .romantic-nav.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            padding: 9px 20px;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-romantic);
+            cursor: pointer;
+            transition: all 0.3s var(--transition-dreamy);
+        }
+
+        .nav-btn.active {
+            background: #ffffff;
+            color: var(--rose-main);
+            box-shadow: 0 4px 15px rgba(201, 24, 74, 0.18);
+        }
+
+        /* ==========================================================================
+           2. LOCKSCREEN
+           ========================================================================== */
+        .lock-title {
+            font-size: 2.8rem;
+            font-style: italic;
+            margin-bottom: 4px;
+            color: var(--rose-main);
+        }
+
+        .lock-sub {
+            font-size: 0.88rem;
+            color: var(--text-romantic);
+            margin-bottom: 28px;
+            font-weight: 500;
+        }
+
+        .pass-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .pass-input {
+            width: 100%;
+            padding: 16px;
+            border-radius: 18px;
+            border: 1.5px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 8px;
+            color: var(--rose-deep);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .pass-input:focus {
+            border-color: #ff7597;
+            background: #ffffff;
+            box-shadow: 0 0 25px rgba(255, 117, 151, 0.3);
+        }
+
+        .error-msg {
+            color: #c9184a;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-top: 8px;
+            height: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .shake-card {
+            animation: cardShake 0.45s var(--transition-dreamy);
+            border-color: #c9184a !important;
+        }
+
+        @keyframes cardShake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-10px); }
+            40%, 80% { transform: translateX(10px); }
+        }
+
+        /* Flower Burst Screen Effect */
+        #flowerBurstLayer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .burst-flower {
+            position: absolute;
+            bottom: -80px;
+            animation: floatUpFlower 3.5s var(--transition-dreamy) forwards;
+        }
+
+        @keyframes floatUpFlower {
+            0% { transform: translateY(0) rotate(0deg) scale(0.3); opacity: 0; }
+            25% { opacity: 1; filter: drop-shadow(0 0 15px rgba(255, 117, 151, 0.8)); }
+            100% { transform: translateY(-115vh) rotate(540deg) scale(1.1); opacity: 0; }
+        }
+
+        /* ==========================================================================
+           2.5 APPLE MUSIC INSPIRED PREMIUM MUSIC PLAYER (SQUARE COVER FIX)
+           ========================================================================== */
+        .music-card {
+            max-width: 420px;
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .music-title-header {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--rose-main);
+            margin-bottom: 2px;
+        }
+
+        .music-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-romantic);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        /* STRICT SQUARE ALBUM ART CONTAINER */
+        .album-art-container {
+            width: 170px;
+            height: 170px;
+            aspect-ratio: 1 / 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 38px rgba(158, 42, 43, 0.22);
+            margin-bottom: 16px;
+            position: relative;
+            background: #fff;
+            flex-shrink: 0;
+        }
+
+        .album-art-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .song-info {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
+        .song-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--rose-deep);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .song-artist {
+            font-size: 0.82rem;
+            color: var(--text-romantic);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .progress-container {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        .progress-bar-wrapper {
+            width: 100%;
+            height: 6px;
+            background: rgba(158, 42, 43, 0.12);
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ff7597, #c9184a);
+            border-radius: 10px;
+            transition: width 0.1s linear;
+        }
+
+        .time-stamps {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.72rem;
+            color: var(--text-romantic);
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            margin-bottom: 14px;
+        }
+
+        .ctrl-btn {
+            background: none;
+            border: none;
+            color: var(--rose-deep);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .ctrl-btn:hover {
+            color: #c9184a;
+            transform: scale(1.1);
+        }
+
+        .play-pause-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff7597, #c9184a);
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(201, 24, 74, 0.35);
+        }
+
+        .play-pause-btn:hover {
+            color: #ffffff;
+            transform: scale(1.06);
+            box-shadow: 0 14px 30px rgba(201, 24, 74, 0.5);
+        }
+
+        .playlist-container {
+            width: 100%;
+            max-height: 120px;
+            overflow-y: auto;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--glass-border);
+            padding: 4px;
+            margin-bottom: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--rose-soft) transparent;
+        }
+
+        .track-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .track-item:hover, .track-item.active {
+            background: rgba(255, 204, 213, 0.5);
+        }
+
+        .track-thumb {
+            width: 32px;
+            height: 32px;
+            aspect-ratio: 1/1;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .track-details {
+            flex-grow: 1;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .track-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--rose-deep);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .track-artist-sub {
+            font-size: 0.68rem;
+            color: var(--text-romantic);
+        }
+
+        /* ==========================================================================
+           3. GIFT BOX SCREEN
+           ========================================================================== */
+        .gift-wrapper {
+            position: relative;
+            cursor: pointer;
+            padding: 20px;
+        }
+
+        .gift-svg {
+            width: 210px;
+            height: 210px;
+            filter: drop-shadow(0 20px 35px rgba(158, 42, 43, 0.25));
+            animation: giftFloat 3.8s ease-in-out infinite alternate;
+            transition: transform 0.4s var(--transition-dreamy);
+        }
+
+        @keyframes giftFloat {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-14px) rotate(2deg); }
+        }
+
+        .gift-svg:hover { transform: scale(1.06); }
+        .gift-svg.shake-box { animation: giftShake 0.6s infinite ease-in-out; }
+
+        @keyframes giftShake {
+            0%, 100% { transform: rotate(0deg) scale(1.05); }
+            25% { transform: rotate(-6deg) scale(1.05); }
+            75% { transform: rotate(6deg) scale(1.05); }
+        }
+
+        .gift-hint {
+            margin-top: 24px;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--rose-main);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        .flash-screen {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 200;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s ease;
+        }
+
+        /* ==========================================================================
+           4. MEMORIES SCREEN (CLEAN POLAROID - NO CAPTION)
+           ========================================================================== */
+        .memories-container {
+            width: 100%;
+            max-width: 900px;
+            height: 72vh;
+            overflow-y: auto;
+            padding: 15px 10px 50px 10px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--rose-soft) transparent;
+        }
+
+        .polaroid-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .polaroid-card {
+            background: #ffffff;
+            padding: 10px 10px 10px 10px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(158, 42, 43, 0.08);
+            transform: rotate(calc(var(--rot, 0) * 1deg));
+            transition: all 0.4s var(--transition-dreamy);
+            cursor: pointer;
+            border: 1px solid rgba(255, 204, 213, 0.4);
+        }
+
+        .polaroid-card:hover {
+            transform: translateY(-8px) rotate(0deg) scale(1.05);
+            box-shadow: 0 20px 40px rgba(201, 24, 74, 0.25);
+            z-index: 20;
+        }
+
+        .polaroid-img-box {
+            width: 100%;
+            height: 140px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fdf0f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Modal Photo Zoom (NO CAPTION TEXT) */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(74, 21, 37, 0.5);
+            backdrop-filter: blur(14px);
+            z-index: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .modal-box {
+            background: #fffdfa;
+            padding: 20px;
+            border-radius: 28px;
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+            transform: scale(0.88);
+            transition: transform 0.4s var(--transition-dreamy);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+            position: relative;
+            border: 1px solid var(--glass-border);
+        }
+
+        .modal-overlay.active .modal-box { transform: scale(1); }
+
+        .modal-img-container {
+            width: 100%;
+            height: 320px;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            color: var(--rose-main);
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* ==========================================================================
+           5. ROMANTIC LETTER SCREEN
+           ========================================================================== */
+        .envelope-wrapper {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+
+        .envelope-body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ffccd5, #ffb3c6);
+            border-radius: 20px;
+            box-shadow: 0 18px 40px rgba(158, 42, 43, 0.25);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-top: 110px solid #ff85a1;
+            transform-origin: top;
+            transition: transform 0.6s var(--transition-dreamy);
+            z-index: 3;
+        }
+
+        .wax-seal {
+            width: 46px;
+            height: 46px;
+            background: #c9184a;
+            border-radius: 50%;
+            position: absolute;
+            top: 88px;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            transition: opacity 0.4s ease;
+        }
+
+        .envelope-body.open .envelope-flap { transform: rotateX(180deg); z-index: 1; }
+        .envelope-body.open .wax-seal { opacity: 0; }
+
+        .letter-paper-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.85);
+            width: 90%;
+            max-width: 540px;
+            max-height: 80vh;
+            background: #fffdfa;
+            border-radius: 28px;
+            padding: 38px 32px;
+            box-shadow: 0 25px 70px rgba(74, 21, 37, 0.25);
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 250;
+            transition: all 0.5s var(--transition-dreamy);
+            border: 1.5px solid var(--glass-border);
+        }
+
+        .letter-paper-modal.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .letter-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--rose-deep);
+            line-height: 1.85;
+            white-space: pre-line;
+            text-align: left;
+        }
+
+        /* ==========================================================================
+           6. FLOWER BOUQUET SCREEN
+           ========================================================================== */
+        .bouquet-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bouquet-svg {
+            width: 240px;
+            height: 310px;
+            filter: drop-shadow(0 15px 30px rgba(158, 42, 43, 0.2));
+            animation: bouquetFloat 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes bouquetFloat {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* ==========================================================================
+           7. CAKE INTERACTIVE SCREEN
+           ========================================================================== */
+        .cake-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .cake-svg {
+            width: 230px;
+            height: 230px;
+            filter: drop-shadow(0 15px 30px rgba(158, 42, 43, 0.2));
+            transition: transform 0.2s ease;
+        }
+
+        .cake-svg:active { transform: scale(0.96); }
+
+        .flame-light {
+            transform-origin: center bottom;
+            animation: flameSoft 0.7s infinite alternate ease-in-out;
+            transition: opacity 0.4s ease;
+        }
+
+        @keyframes flameSoft {
+            0% { transform: scale(1) rotate(-2deg); }
+            100% { transform: scale(1.12) rotate(2deg); }
+        }
+
+        .flame-light.off { opacity: 0 !important; }
+
+        .smoke-puff {
+            opacity: 0;
+            transform-origin: center;
+        }
+
+        .smoke-puff.active { animation: smokeUp 2.2s forwards; }
+
+        @keyframes smokeUp {
+            0% { transform: translateY(0) scale(0.5); opacity: 0.8; }
+            100% { transform: translateY(-40px) scale(1.5); opacity: 0; }
+        }
+
+        .cake-tag {
+            margin-top: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--rose-deep);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px 22px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ==========================================================================
+           8. PLANET SATURN SCREEN (DREAMY COSMIC NIGHT - 360 INTERACTIVE)
+           ========================================================================== */
+        #screen-saturn {
+            background: #0f0714 !important;
+            color: #fff;
+        }
+
+        .saturn-box {
+            width: 320px;
+            height: 320px;
+            position: relative;
+            cursor: grab;
+            margin: 10px 0;
+            touch-action: none;
+        }
+
+        .saturn-box:active { cursor: grabbing; }
+
+        #saturnCanvas { width: 100%; height: 100%; }
+
+        .saturn-hint {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.82rem;
+            margin-top: 2px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 480px) {
+            .romantic-card { padding: 32px 22px; }
+            .lock-title { font-size: 2.3rem; }
+            .polaroid-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .polaroid-img-box { height: 120px; }
+            .saturn-box { width: 280px; height: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Single Audio Element for Website Music -->
+    <audio id="globalAudioPlayer" preload="auto"></audio>
+
+    <!-- Dreamy Animated Rose Aurora Background -->
+    <div class="romantic-bg" id="romanticBg">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+    </div>
+
+    <!-- Petals Canvas Layer -->
+    <canvas id="petalCanvas"></canvas>
+
+    <!-- Soft Romantic Cursor Glow -->
+    <div class="romantic-cursor" id="romanticCursor"></div>
+
+    <!-- White Flash Screen -->
+    <div class="flash-screen" id="flashScreen"></div>
+
+    <!-- Flower Burst Container -->
+    <div id="flowerBurstLayer"></div>
+
+    <!-- Floating Navigation Bar -->
+    <nav class="romantic-nav" id="romanticNav">
+        <button class="nav-btn active" data-target="screen-memories">Memories</button>
+        <button class="nav-btn" data-target="screen-message">Message</button>
+        <button class="nav-btn" data-target="screen-bouquet">Bouquet</button>
+        <button class="nav-btn" data-target="screen-cake">Cake</button>
+    </nav>
+
+    <!-- App Views Container -->
+    <main id="app">
+
+        <!-- SCREEN 1: LOCKSCREEN -->
+        <section class="screen active" id="screen-lock">
+            <div class="romantic-card" id="lockCard">
+                <h1 class="lock-title">Happy Birthday</h1>
+                <p class="lock-sub">Masukkan Tanggal Spesial Putri ✨</p>
+
+                <div class="pass-group">
+                    <input type="password" id="passInput" class="pass-input" maxlength="8" placeholder="••••••••" autocomplete="off" />
+                    <div class="error-msg" id="errorMsg">Password Salah</div>
+                </div>
+
+                <button class="btn-romantic" id="unlockBtn">
+                    Buka Hadiah Cinta
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 1.5: APPLE MUSIC STYLE PLAYER -->
+        <section class="screen" id="screen-music">
+            <div class="romantic-card music-card">
+                <h2 class="music-title-header">Pilih Musik Favorit 🎵</h2>
+                <p class="music-subtitle">Pilih lagu untuk mengiringi momen indah kita</p>
+
+                <!-- Album Cover Placeholder (Strictly Square) -->
+                <div class="album-art-container" id="albumContainer">
+                    <img id="albumCover" src="assets/music/cover1.jpg" alt="Album Cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'170\' height=\'170\' viewBox=\'0 0 170 170\'><rect width=\'100%\' height=\'100%\' fill=\'%23ffb3c6\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'14\' fill=\'%23c9184a\' text-anchor=\'middle\' dy=\'.3em\'>Cover Photo 🎵</text></svg>'">
+                </div>
+
+                <!-- Song Details -->
+                <div class="song-info">
+                    <div class="song-title" id="songTitle">Nights</div>
+                    <div class="song-artist" id="songArtist">Frank Ocean</div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar-wrapper" id="progressWrapper">
+                        <div class="progress-bar-fill" id="musicProgressFill"></div>
+                    </div>
+                    <div class="time-stamps">
+                        <span id="currentTimeText">0:00</span>
+                        <span id="totalTimeText">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Main Player Controls -->
+                <div class="player-controls">
+                    <button class="ctrl-btn" id="prevBtn" title="Previous">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                    </button>
+                    <button class="ctrl-btn play-pause-btn" id="playPauseBtn" title="Play/Pause">
+                        <svg id="playIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg id="pauseIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+                    <button class="ctrl-btn" id="nextBtn" title="Next">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                    </button>
+                </div>
+
+                <!-- 7 Slot Songs Playlist Selector -->
+                <div class="playlist-container" id="playlistContainer">
+                    <!-- Items generated by JavaScript -->
+                </div>
+
+                <button class="btn-romantic" id="continueToGiftBtn" style="margin-top: 4px;">
+                    Lanjutkan →
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: GIFT BOX -->
+        <section class="screen" id="screen-gift">
+            <div class="gift-wrapper" id="giftWrapper">
+                <svg class="gift-svg" id="giftSvg" viewBox="0 0 200 200">
+                    <defs>
+                        <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffb3c6" />
+                            <stop offset="100%" stop-color="#ff7597" />
+                        </linearGradient>
+                        <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#fffdfa" />
+                            <stop offset="100%" stop-color="#ffe5ec" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="35" y="75" width="130" height="95" rx="16" fill="url(#boxGrad)" />
+                    <rect x="25" y="55" width="150" height="30" rx="8" fill="url(#boxGrad)" />
+                    <rect x="88" y="55" width="24" height="115" fill="url(#ribbonGrad)" />
+                    <rect x="35" y="110" width="130" height="24" fill="url(#ribbonGrad)" />
+                    <path d="M 100 55 C 70 25, 40 40, 90 55 Z" fill="url(#ribbonGrad)" />
+                    <path d="M 100 55 C 130 25, 160 40, 110 55 Z" fill="url(#ribbonGrad)" />
+                    <circle cx="100" cy="55" r="8" fill="#fff" />
+                </svg>
+            </div>
+            <div class="gift-hint">Sentuh Kotak Kejutan Ini ✨</div>
+        </section>
+
+        <!-- SCREEN 3: MEMORIES (17 POLAROID PHOTOS - NO CAPTIONS) -->
+        <section class="screen" id="screen-memories">
+            <div class="memories-container">
+                <div class="polaroid-grid" id="polaroidGrid"></div>
+            </div>
+        </section>
+
+        <!-- SCREEN 4: ROMANTIC MESSAGE / LETTER -->
+        <section class="screen" id="screen-message">
+            <div class="envelope-wrapper" id="envelopeWrapper">
+                <div class="envelope-body" id="envelopeBody">
+                    <div class="envelope-flap"></div>
+                    <div class="wax-seal">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--rose-deep);">Klik Amplop Untuk Membuka Surat Cintaku ✨</p>
+
+            <!-- Letter Paper Modal -->
+            <div class="letter-paper-modal" id="letterPaperModal">
+                <div class="letter-text" id="letterText"></div>
+                <div style="text-align: center; margin-top: 24px;">
+                    <button class="btn-romantic" id="closeLetterBtn">Simpan Surat Ini</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 5: BOUQUET -->
+        <section class="screen" id="screen-bouquet">
+            <div class="romantic-card bouquet-card">
+                <svg class="bouquet-svg" viewBox="0 0 300 400">
+                    <defs>
+                        <linearGradient id="wrapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f2e3c6" />
+                            <stop offset="100%" stop-color="#d8c29d" />
+                        </linearGradient>
+                        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff7597" />
+                            <stop offset="100%" stop-color="#c9184a" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="80,200 220,200 180,380 120,380" fill="url(#wrapGrad)" />
+                    <polygon points="60,180 240,180 220,220 80,220" fill="#c4b08b" />
+                    <rect x="125" y="270" width="50" height="15" rx="5" fill="#c9184a" />
+                    
+                    <!-- Flowers -->
+                    <g>
+                        <g transform="translate(150, 130)">
+                            <circle cx="-16" cy="0" r="18" fill="url(#roseGrad)" />
+                            <circle cx="16" cy="0" r="18" fill="url(#roseGrad)" />
+                            <circle cx="0" cy="-16" r="18" fill="url(#roseGrad)" />
+                            <circle cx="0" cy="16" r="18" fill="url(#roseGrad)" />
+                            <circle cx="0" cy="0" r="12" fill="#fff59d" />
+                        </g>
+                        <g transform="translate(100, 150)">
+                            <circle cx="-12" cy="0" r="15" fill="#ffb3c6" />
+                            <circle cx="12" cy="0" r="15" fill="#ffb3c6" />
+                            <circle cx="0" cy="-12" r="15" fill="#ffb3c6" />
+                            <circle cx="0" cy="12" r="15" fill="#ffb3c6" />
+                            <circle cx="0" cy="0" r="10" fill="#fff59d" />
+                        </g>
+                        <g transform="translate(200, 150)">
+                            <circle cx="-12" cy="0" r="15" fill="#ffb3c6" />
+                            <circle cx="12" cy="0" r="15" fill="#ffb3c6" />
+                            <circle cx="0" cy="-12" r="15" fill="#ffb3c6" />
+                            <circle cx="0" cy="12" r="15" fill="#ffb3c6" />
+                            <circle cx="0" cy="0" r="10" fill="#fff59d" />
+                        </g>
+                    </g>
+                </svg>
+                <h2 style="font-size: 1.8rem; margin-top: 15px; font-style: italic;">Buket Bunga Terindah Untuk Putri 🌸</h2>
+            </div>
+        </section>
+
+        <!-- SCREEN 6: CAKE INTERACTIVE -->
+        <section class="screen" id="screen-cake">
+            <div class="romantic-card cake-card" id="cakeCard">
+                <svg class="cake-svg" id="cakeSvg" viewBox="0 0 200 200">
+                    <defs>
+                        <linearGradient id="cGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffccd5" />
+                            <stop offset="100%" stop-color="#ff7597" />
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="100" cy="170" rx="80" ry="15" fill="#e0e0e0" />
+                    <g id="cakeBodyGroup">
+                        <rect x="40" y="100" width="120" height="60" rx="10" fill="url(#cGrad)" />
+                        <path d="M 40 100 Q 55 118 70 100 Q 85 118 100 100 Q 115 118 130 100 Q 145 118 160 100 L 160 90 L 40 90 Z" fill="#fffdfa" />
+                    </g>
+                    <rect id="candleStick" x="96" y="60" width="8" height="30" rx="3" fill="#fff" />
+                    <path class="smoke-puff" id="smokePuff" d="M 100 55 C 90 40, 110 30, 95 15" stroke="#ccc" stroke-width="3" fill="none" stroke-linecap="round" />
+                    <path class="flame-light" id="flameLight" d="M 100 42 C 93 52, 107 52, 100 42 Z" fill="#ffb300" />
+                </svg>
+                <div class="cake-tag" id="cakeTag">Tiup & Padamkan Lilinnya (Klik Lilin) 🎂</div>
+            </div>
+        </section>
+
+        <!-- SCREEN 7: PLANET SATURN (360 DEGREE INTERACTIVE) -->
+        <section class="screen" id="screen-saturn">
+            <h2 style="font-size: 2.2rem; font-style: italic; color: #ffb3c6;">Semesta Cinta Putri 🪐</h2>
+            <p class="saturn-hint">Geser / Drag Planet Ke Segala Arah Untuk Memutar 360° ✨</p>
+
+            <div class="saturn-box" id="saturnBox">
+                <canvas id="saturnCanvas" width="320" height="320"></canvas>
+            </div>
+
+            <button class="btn-romantic" id="toThankYouBtn" style="margin-top: 25px;">
+                Lanjutkan
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </section>
+
+        <!-- SCREEN 8: THANK YOU -->
+        <section class="screen" id="screen-thankyou">
+            <div class="romantic-card">
+                <h1 style="font-size: 2.6rem; font-style: italic; color: var(--rose-main); margin-bottom: 12px;">Terima Kasih, Cintaku 💖</h1>
+                <p style="font-size: 0.95rem; line-height: 1.85; color: var(--text-romantic); margin-bottom: 26px;">
+                    Terima kasih sudah hadir di hidupku dan menjadi bagian terindah dalam setiap hariku, Putri. <br><br>
+                    Semoga di usiamu yang ke-17 ini, kamu selalu diberikan kebahagiaan, kesehatan, dan semua impianmu bisa terwujud. Aku akan selalu ada di sisimu!
+                </p>
+
+                <a href="https://wa.me/6283832331077?text=Makasih%20banyak%20ya%20Haikal%20ganteng%20hadiah%20website%20ulang%20tahunnya%20sangat%20indah%20dan%20romantis!%20%F0%9F%92%96" target="_blank" style="text-decoration: none;">
+                    <button class="btn-romantic" style="background: #25d366; box-shadow: 0 12px 30px rgba(37,211,102,0.35);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        Kirim Pesan Balasan (WA)
+                    </button>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Photo Modal Overlay (NO CAPTION BOX) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="modal-img-container" id="modalImgContainer"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       9. JAVASCRIPT LOGIC
+       ========================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const PASS = "26082009";
+            let activeScreen = "screen-lock";
+
+            /* Cursor Glow Follower */
+            const cursor = document.getElementById('romanticCursor');
+            window.addEventListener('mousemove', (e) => {
+                cursor.style.left = `${e.clientX}px`;
+                cursor.style.top = `${e.clientY}px`;
+            });
+
+            /* Petals Canvas Background */
+            const canvas = document.getElementById('petalCanvas');
+            const ctx = canvas.getContext('2d');
+            let petals = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            class FloatingPetal {
+                constructor() { this.reset(); }
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = -20;
+                    this.size = Math.random() * 5 + 3;
+                    this.speedY = Math.random() * 1.2 + 0.5;
+                    this.speedX = Math.sin(Math.random() * Math.PI) * 0.8;
+                    this.opacity = Math.random() * 0.6 + 0.3;
+                    this.color = ['#ffccd5', '#ff85a1', '#ff4d6d', '#ffffff'][Math.floor(Math.random() * 4)];
+                }
+                update() {
+                    this.y += this.speedY;
+                    this.x += this.speedX;
+                    if (this.y > canvas.height + 20) this.reset();
+                }
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            for (let i = 0; i < 40; i++) petals.push(new FloatingPetal());
+
+            function renderPetals() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                petals.forEach(p => { p.update(); p.draw(); });
+                requestAnimationFrame(renderPetals);
+            }
+            renderPetals();
+
+            /* Screen Navigator */
+            function navigateTo(targetId) {
+                const current = document.getElementById(activeScreen);
+                const target = document.getElementById(targetId);
+
+                if (!target || activeScreen === targetId) return;
+
+                current.classList.remove('active');
+                setTimeout(() => {
+                    target.classList.add('active');
+                    activeScreen = targetId;
+
+                    const nav = document.getElementById('romanticNav');
+                    const bg = document.getElementById('romanticBg');
+                    
+                    if (['screen-memories', 'screen-message', 'screen-bouquet', 'screen-cake'].includes(targetId)) {
+                        nav.classList.add('visible');
+                    } else {
+                        nav.classList.remove('visible');
+                    }
+
+                    if (targetId === 'screen-saturn') {
+                        bg.style.opacity = '0';
+                    } else {
+                        bg.style.opacity = '1';
+                    }
+                }, 450);
+            }
+
+            /* Lockscreen Logic */
+            const passInput = document.getElementById('passInput');
+            const unlockBtn = document.getElementById('unlockBtn');
+            const errorMsg = document.getElementById('errorMsg');
+            const lockCard = document.getElementById('lockCard');
+
+            function unlock() {
+                if (passInput.value === PASS) {
+                    errorMsg.style.opacity = '0';
+                    spawnFlowerBurst();
+                    setTimeout(() => navigateTo('screen-music'), 2200);
+                } else {
+                    lockCard.classList.add('shake-card');
+                    errorMsg.style.opacity = '1';
+                    setTimeout(() => lockCard.classList.remove('shake-card'), 450);
+                }
+            }
+
+            unlockBtn.addEventListener('click', unlock);
+            passInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') unlock(); });
+
+            function spawnFlowerBurst() {
+                const layer = document.getElementById('flowerBurstLayer');
+                for (let i = 0; i < 24; i++) {
+                    setTimeout(() => {
+                        const fl = document.createElement('div');
+                        fl.className = 'burst-flower';
+                        fl.style.left = `${Math.random() * 90 + 5}vw`;
+                        fl.innerHTML = `
+                            <svg width="42" height="42" viewBox="0 0 100 100">
+                                <circle cx="35" cy="50" r="18" fill="#ff7597" />
+                                <circle cx="65" cy="50" r="18" fill="#ff7597" />
+                                <circle cx="50" cy="35" r="18" fill="#ff7597" />
+                                <circle cx="50" cy="65" r="18" fill="#ff7597" />
+                                <circle cx="50" cy="50" r="12" fill="#fff59d" />
+                            </svg>
+                        `;
+                        layer.appendChild(fl);
+                        setTimeout(() => fl.remove(), 3500);
+                    }, i * 75);
+                }
+            }
+
+            /* ==========================================================================
+               MUSIC PLAYER SYSTEM
+               ========================================================================== */
+            const songs = [
+                { id: 1, title: "All Night", artist: "Beyoncè", src: "assets/music/song1.mp3", cover: "assets/music/cover1.jpg" },
+                { id: 2, title: "Blank Space", artist: "Taylor Swift", src: "assets/music/song2.mp3", cover: "assets/music/cover2.jpg" },
+                { id: 3, title: "Style", artist: "Taylor Swift", src: "assets/music/song3.mp3", cover: "assets/music/cover3.jpg" },
+                { id: 4, title: "Taylor Swift Megamix", artist: "Taylor Swift", src: "assets/music/song4.mp3", cover: "assets/music/cover4.jpg" },
+                { id: 5, title: "All Too Well", artist: "Taylor Swift", src: "assets/music/song5.mp3", cover: "assets/music/cover5.jpg" },
+                { id: 6, title: "West Coast", artist: "Lana Del Rey", src: "assets/music/song6.mp3", cover: "assets/music/cover6.jpg" },
+                { id: 7, title: "White Mustang", artist: "Lana Del Rey", src: "assets/music/song7.mp3", cover: "assets/music/cover7.jpg" }
+            ];
+
+            let currentSongIndex = 0;
+            const globalAudio = document.getElementById('globalAudioPlayer');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const playIcon = document.getElementById('playIcon');
+            const pauseIcon = document.getElementById('pauseIcon');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const songTitleEl = document.getElementById('songTitle');
+            const songArtistEl = document.getElementById('songArtist');
+            const albumCoverEl = document.getElementById('albumCover');
+            const musicProgressFill = document.getElementById('musicProgressFill');
+            const progressWrapper = document.getElementById('progressWrapper');
+            const currentTimeText = document.getElementById('currentTimeText');
+            const totalTimeText = document.getElementById('totalTimeText');
+            const playlistContainer = document.getElementById('playlistContainer');
+            const continueToGiftBtn = document.getElementById('continueToGiftBtn');
+
+            function renderPlaylist() {
+                playlistContainer.innerHTML = '';
+                songs.forEach((song, idx) => {
+                    const item = document.createElement('div');
+                    item.className = `track-item ${idx === currentSongIndex ? 'active' : ''}`;
+                    item.innerHTML = `
+                        <img class="track-thumb" src="${song.cover}" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 32 32\'><rect width=\'100%\' height=\'100%\' fill=\'%23ffb3c6\'/></svg>'">
+                        <div class="track-details">
+                            <div class="track-name">${song.title}</div>
+                            <div class="track-artist-sub">${song.artist}</div>
+                        </div>
+                    `;
+                    item.addEventListener('click', () => {
+                        currentSongIndex = idx;
+                        loadAndPlaySong();
+                    });
+                    playlistContainer.appendChild(item);
+                });
+            }
+
+            function formatTime(seconds) {
+                if (isNaN(seconds)) return "0:00";
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+            }
+
+            function loadSong(index) {
+                const song = songs[index];
+                songTitleEl.textContent = song.title;
+                songArtistEl.textContent = song.artist;
+                albumCoverEl.src = song.cover;
+                globalAudio.src = song.src;
+                renderPlaylist();
+            }
+
+            function loadAndPlaySong() {
+                loadSong(currentSongIndex);
+                globalAudio.play().then(() => {
+                    updatePlayPauseUI(true);
+                }).catch(() => {
+                    updatePlayPauseUI(false);
+                });
+            }
+
+            function updatePlayPauseUI(isPlaying) {
+                if (isPlaying) {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                } else {
+                    playIcon.style.display = 'block';
+                    pauseIcon.style.display = 'none';
+                }
+            }
+
+            playPauseBtn.addEventListener('click', () => {
+                if (globalAudio.paused) {
+                    if (!globalAudio.src) loadSong(currentSongIndex);
+                    globalAudio.play().then(() => updatePlayPauseUI(true)).catch(() => {});
+                } else {
+                    globalAudio.pause();
+                    updatePlayPauseUI(false);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+                loadAndPlaySong();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentSongIndex = (currentSongIndex + 1) % songs.length;
+                loadAndPlaySong();
+            });
+
+            globalAudio.addEventListener('timeupdate', () => {
+                if (globalAudio.duration) {
+                    const pct = (globalAudio.currentTime / globalAudio.duration) * 100;
+                    musicProgressFill.style.width = `${pct}%`;
+                    currentTimeText.textContent = formatTime(globalAudio.currentTime);
+                    totalTimeText.textContent = formatTime(globalAudio.duration);
+                }
+            });
+
+            progressWrapper.addEventListener('click', (e) => {
+                const rect = progressWrapper.getBoundingClientRect();
+                const clickPos = (e.clientX - rect.left) / rect.width;
+                if (globalAudio.duration) {
+                    globalAudio.currentTime = clickPos * globalAudio.duration;
+                }
+            });
+
+            globalAudio.addEventListener('ended', () => {
+                currentSongIndex = (currentSongIndex + 1) % songs.length;
+                loadAndPlaySong();
+            });
+
+            loadSong(currentSongIndex);
+
+            continueToGiftBtn.addEventListener('click', () => {
+                navigateTo('screen-gift');
+            });
+
+            /* Gift Box Click */
+            const giftWrapper = document.getElementById('giftWrapper');
+            const giftSvg = document.getElementById('giftSvg');
+            const flashScreen = document.getElementById('flashScreen');
+
+            giftWrapper.addEventListener('click', () => {
+                giftSvg.classList.add('shake-box');
+                setTimeout(() => flashScreen.style.opacity = '1', 500);
+                setTimeout(() => {
+                    flashScreen.style.opacity = '0';
+                    navigateTo('screen-memories');
+                    updateNavBtn('screen-memories');
+                }, 1200);
+            });
+
+            /* Nav Buttons */
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = btn.getAttribute('data-target');
+                    navigateTo(target);
+                    updateNavBtn(target);
+                });
+            });
+
+            function updateNavBtn(targetId) {
+                navBtns.forEach(b => {
+                    if (b.getAttribute('data-target') === targetId) b.classList.add('active');
+                    else b.classList.remove('active');
+                });
+            }
+
+            /* Memories (17 Polaroid Photos - NO CAPTION) */
+            const polaroidGrid = document.getElementById('polaroidGrid');
+
+            for (let i = 1; i <= 17; i++) {
+                const card = document.createElement('div');
+                card.className = 'polaroid-card';
+                card.style.setProperty('--rot', (Math.random() * 8 - 4).toFixed(1));
+
+                const photoPath = `assets/photos/photo${i}.jpg`;
+
+                card.innerHTML = `
+                    <div class="polaroid-img-box">
+                        <img
+                            src="${photoPath}"
+                            alt="Memory Photo #${i}"
+                            style="width:100%; height:100%; object-fit:cover; display:block; border-radius:8px;"
+                        >
+                    </div>
+                `;
+
+                card.addEventListener('click', () => {
+                    document.getElementById('modalImgContainer').innerHTML = `
+                        <img
+                            src="${photoPath}"
+                            alt="Memory Photo #${i}"
+                            style="width:100%; height:100%; object-fit:contain; display:block;"
+                        >
+                    `;
+                    document.getElementById('modalOverlay').classList.add('active');
+                });
+
+                polaroidGrid.appendChild(card);
+            }
+
+            document.getElementById('closeModal').addEventListener('click', () => {
+                document.getElementById('modalOverlay').classList.remove('active');
+            });
+
+            /* Letter Message Typewriter */
+            const envelopeWrapper = document.getElementById('envelopeWrapper');
+            const envelopeBody = document.getElementById('envelopeBody');
+            const letterPaperModal = document.getElementById('letterPaperModal');
+            const closeLetterBtn = document.getElementById('closeLetterBtn');
+            const letterText = document.getElementById('letterText');
+
+            const fullRomanticMessage = 
+                "Selamat Ulang Tahun yang ke-17, Putri tercinta! ❤️\n\n" +
+                "Tidak terasa waktu berlalu begitu cepat, dan hari ini kamu memasuki usia yang begitu spesial, Sweet Seventeen. Di hari yang membahagiakan ini, aku ingin mengucapkan betapa bersyukurnya aku bisa memilikimu di dalam hidupku.\n\n" +
+                "Kamu adalah alasan senyumku setiap hari, sosok yang selalu membawa kehangatan, kedamaian, dan warna-warni indah dalam hariku. Setiap tawa kamu, cerita kamu, dan perhatian kecil dari kamu sangat berharga buat aku.\n\n" +
+                "Semoga di usiamu yang ke-17 ini, semua doa terbaikmu terkabul, selalu dilimpahi kesehatan, kebahagiaan yang melimpah, dan kesuksesan dalam setiap langkahmu. Aku akan selalu ada di sini untuk mendukungmu!\n\n" +
+                "I love you so much, Putri! ✨\n\n" +
+                "Dengan segenap cintaku,\n" +
+                "Haikal Ganteng 💖";
+
+            let letterIdx = 0;
+            envelopeWrapper.addEventListener('click', () => {
+                envelopeBody.classList.add('open');
+                setTimeout(() => {
+                    letterPaperModal.classList.add('active');
+                    if (letterIdx === 0) startTypewriter();
+                }, 500);
+            });
+
+            closeLetterBtn.addEventListener('click', () => {
+                letterPaperModal.classList.remove('active');
+                setTimeout(() => envelopeBody.classList.remove('open'), 300);
+            });
+
+            function startTypewriter() {
+                if (letterIdx < fullRomanticMessage.length) {
+                    letterText.textContent += fullRomanticMessage.charAt(letterIdx);
+                    letterIdx++;
+                    setTimeout(startTypewriter, 26);
+                }
+            }
+
+            /* Cake Logic */
+            const cakeCard = document.getElementById('cakeCard');
+            const flameLight = document.getElementById('flameLight');
+            const smokePuff = document.getElementById('smokePuff');
+            const cakeTag = document.getElementById('cakeTag');
+            let cakeStep = 0;
+
+            cakeCard.addEventListener('click', () => {
+                if (cakeStep === 0) {
+                    flameLight.classList.add('off');
+                    smokePuff.classList.add('active');
+                    cakeTag.innerText = "Yey Lilin Padam! Klik Untuk Memakan Kuenya 🍰";
+                    cakeStep = 1;
+                } else if (cakeStep === 1) {
+                    document.getElementById('cakeBodyGroup').style.opacity = '0.5';
+                    cakeTag.innerText = "Hampir Habis! Sekali Lagi! 😋";
+                    cakeStep = 2;
+                } else if (cakeStep >= 2) {
+                    document.getElementById('cakeSvg').style.opacity = '0.2';
+                    cakeTag.innerText = "Kuenya Habis! Yuk Ke Kejutan Luar Angkasa 🪐";
+                    setTimeout(() => navigateTo('screen-saturn'), 1000);
+                }
+            });
+
+            /* ==========================================================================
+               PLANET SATURN 360-DEGREE FULLY INTERACTIVE ENGINE
+               ========================================================================== */
+            const sCanvas = document.getElementById('saturnCanvas');
+            const sCtx = sCanvas.getContext('2d');
+            const saturnBox = document.getElementById('saturnBox');
+
+            let angleX = 0.35;
+            let angleY = 0;
+            let velX = 0;
+            let velY = 0.008;
+            let isDragging = false;
+            let lastMouseX = 0;
+            let lastMouseY = 0;
+
+            const orbitItems = [
+                { text: "I Love You", radius: 105, speed: 0.8, offset: 0 },
+                { text: "I Love You Piput", radius: 125, speed: -0.6, offset: 1 },
+                { text: "Haikal Ganteng", radius: 110, speed: 0.9, offset: 2 },
+                { text: "Happy 17th Birthday", radius: 135, speed: 0.5, offset: 3 },
+                { text: "Princess Putri", radius: 100, speed: -0.8, offset: 4 },
+                { text: "My Everything", radius: 120, speed: 0.7, offset: 5 },
+                { text: "Forever & Always", radius: 140, speed: -0.5, offset: 6 },
+                { text: "You Are My Universe", radius: 115, speed: 0.8, offset: 7 },
+                { text: "Cintaku Putri", radius: 130, speed: -0.7, offset: 8 },
+                { text: "Cinta Selamanya", radius: 105, speed: 0.6, offset: 9 }
+            ];
+
+            const spaceStars = [];
+            for (let i = 0; i < 45; i++) {
+                spaceStars.push({
+                    x: Math.random() * sCanvas.width,
+                    y: Math.random() * sCanvas.height,
+                    size: Math.random() * 1.8 + 0.5,
+                    alpha: Math.random() * 0.8 + 0.2
+                });
+            }
+
+            function render3DSaturn() {
+                sCtx.clearRect(0, 0, sCanvas.width, sCanvas.height);
+                const cx = sCanvas.width / 2;
+                const cy = sCanvas.height / 2;
+
+                if (!isDragging) {
+                    angleY += velY;
+                    angleX += velX;
+                    velX *= 0.95;
+                    velY = velY * 0.98 + 0.005 * 0.02;
+                }
+
+                spaceStars.forEach(st => {
+                    sCtx.save();
+                    sCtx.globalAlpha = st.alpha;
+                    sCtx.fillStyle = "#ffffff";
+                    sCtx.beginPath();
+                    sCtx.arc(st.x, st.y, st.size, 0, Math.PI * 2);
+                    sCtx.fill();
+                    sCtx.restore();
+                });
+
+                sCtx.save();
+                sCtx.translate(cx, cy);
+                sCtx.rotate(angleX);
+                sCtx.beginPath();
+                sCtx.ellipse(0, 0, 100, 26, 0, Math.PI, 0, true);
+                sCtx.strokeStyle = "rgba(255, 182, 193, 0.4)";
+                sCtx.lineWidth = 10;
+                sCtx.stroke();
+                sCtx.restore();
+
+                const planetRadius = 42;
+                const pGrad = sCtx.createRadialGradient(cx - 12, cy - 12, 8, cx, cy, planetRadius);
+                pGrad.addColorStop(0, '#ffccd5');
+                pGrad.addColorStop(0.6, '#ff7597');
+                pGrad.addColorStop(1, '#800f2f');
+
+                sCtx.beginPath();
+                sCtx.arc(cx, cy, planetRadius, 0, Math.PI * 2);
+                sCtx.fillStyle = pGrad;
+                sCtx.shadowColor = '#ff7597';
+                sCtx.shadowBlur = 22;
+                sCtx.fill();
+                sCtx.shadowBlur = 0;
+
+                sCtx.save();
+                sCtx.translate(cx, cy);
+                sCtx.rotate(angleX);
+                sCtx.beginPath();
+                sCtx.ellipse(0, 0, 100, 26, 0, 0, Math.PI, false);
+                sCtx.strokeStyle = "rgba(255, 182, 193, 0.85)";
+                sCtx.lineWidth = 10;
+                sCtx.stroke();
+                sCtx.restore();
+
+                orbitItems.forEach((item) => {
+                    const currentAngle = angleY * item.speed + (item.offset * (Math.PI * 2 / orbitItems.length));
+                    const x3D = Math.cos(currentAngle) * item.radius;
+                    const z3D = Math.sin(currentAngle) * item.radius;
+
+                    const tiltCos = Math.cos(angleX);
+                    const tiltSin = Math.sin(angleX);
+
+                    const screenX = cx + x3D;
+                    const screenY = cy + (z3D * tiltSin * 0.35);
+                    const scale = (z3D + 200) / 200;
+                    const alpha = Math.max(0.2, Math.min(1, (z3D + 120) / 200));
+
+                    sCtx.save();
+                    sCtx.translate(screenX, screenY);
+                    sCtx.scale(Math.max(0.65, scale), Math.max(0.65, scale));
+                    sCtx.globalAlpha = alpha;
+                    sCtx.font = "italic 600 11px 'Cormorant Garamond', serif";
+                    sCtx.fillStyle = "#ffffff";
+                    sCtx.shadowColor = "#ff7597";
+                    sCtx.shadowBlur = 8;
+                    sCtx.textAlign = "center";
+                    sCtx.fillText(item.text, 0, 0);
+                    sCtx.restore();
+                });
+
+                requestAnimationFrame(render3DSaturn);
+            }
+            render3DSaturn();
+
+            function startDrag(x, y) {
+                isDragging = true;
+                lastMouseX = x;
+                lastMouseY = y;
+            }
+
+            function moveDrag(x, y) {
+                if (!isDragging) return;
+                const deltaX = x - lastMouseX;
+                const deltaY = y - lastMouseY;
+
+                velY = deltaX * 0.012;
+                velX = deltaY * 0.008;
+
+                angleY += velY;
+                angleX += velX;
+                angleX = Math.max(-0.8, Math.min(0.8, angleX));
+
+                lastMouseX = x;
+                lastMouseY = y;
+            }
+
+            function endDrag() {
+                isDragging = false;
+            }
+
+            saturnBox.addEventListener('mousedown', (e) => startDrag(e.clientX, e.clientY));
+            window.addEventListener('mousemove', (e) => moveDrag(e.clientX, e.clientY));
+            window.addEventListener('mouseup', endDrag);
+
+            saturnBox.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) startDrag(e.touches[0].clientX, e.touches[0].clientY);
+            });
+            window.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1) moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+            });
+            window.addEventListener('touchend', endDrag);
+
+            document.getElementById('toThankYouBtn').addEventListener('click', () => {
+                navigateTo('screen-thankyou');
+            });
+        });
+    </script>
+</body>
+</html>
